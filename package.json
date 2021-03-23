@@ -1,0 +1,24 @@
+{
+  "name": "dj-yasuo",
+  "version": "1.0.0",
+  "description": "Discord bot which will be used to play musci",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "ffmpeg-static": "^4.2.8",
+    "giphy-js-sdk-core": "^1.0.6",
+    "yt-search": "^2.7.5",
+    "ytdl-core": "^4.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "music"
+  ],
+  "author": "Mihai",
+  "license": "ISC"
+}
