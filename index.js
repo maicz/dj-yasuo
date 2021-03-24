@@ -33,6 +33,14 @@ dj_yasuo.on('message', (msg) => {
             dj_yasuo.commands.get(command).execute(msg, args, Discord);
             break;
         }
+        case('play'): {
+            dj_yasuo.commands.get(command).execute(msg, args, Discord);
+            break;
+        }
+        case('leave'): {
+            dj_yasuo.commands.get(command).execute(msg, args, Discord);
+            break;
+        }
         default: {
             dj_yasuo.commands.get(command).execute(msg, args);
         }
