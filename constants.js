@@ -1,4 +1,3 @@
-
 const quotes = [
     'Death is like the wind - always by my side.',
     'No cure for fools.',
@@ -29,13 +28,4 @@ const emojis = [
     ':poo:',
 ]
 
-const commands = new Map([
-    ['!commands', 'All the cool stuff I can do'],
-    ['!gif', 'Send a random gif.'],
-    ['!hasagy', 'You know the reply'],
-    ['!quote', 'I will say one of my favorite quotes'],
-    ['!opgg', 'I will give you an op.gg link with your profiles'],
-    ['!playmusic', '(Coming soon) I will play some music, I\'m a DJ after all..']
-]);
-
-module.exports = { commands, emojis, quotes };
+module.exports = {emojis, quotes};
