@@ -20,10 +20,13 @@ const randomEmoji = () => {
 /*
 * Function used to return a gif url from giphy.
 * */
-const searchForGif = () => {
-    return giphy.search('gifs', {"q": 'yasuo', "limit": 10})
+const searchForGif = (query) => {
+    if (!query) query = 'dj yasuo';
+    return giphy.search('gifs', {"q": query, "limit": 3})
         .then((response) => {
-            return response.data[Math.floor(Math.random() * 10)].url;
+            let url = response.data[Math.floor(Math.random() * 3)].url;
+            console.log(`Gif for query: ${query} -> ${url}`);
+            return url;
         })
         .catch((err) => {
             return err;

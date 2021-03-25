@@ -4,13 +4,13 @@ const ytSearch = require('yt-search');
 module.exports = {
     name: 'play',
     description: 'Joins and plays a video from youtube',
-    async execute(msg, args) {
+    async execute(dj_yasuo, msg, args, Discord) {
 
         /*
         * Do some basic checks for permissions
         * */
         const voiceChannel = msg.member.voice.channel;
-        if (!voiceChannel) return msg.channel.reply('You need to be in a voice channel to execute that command');
+        if (!voiceChannel) return msg.channel.send('You need to be in a voice channel to execute that command');
 
         const permissions = voiceChannel.permissionsFor(msg.client.user);
         if (!permissions.has('CONNECT')) return msg.reply('You do not have the correct permissions. Sorry buddy..');
