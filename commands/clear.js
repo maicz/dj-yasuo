@@ -1,7 +1,7 @@
 module.exports = {
     name: 'clear',
     description: 'Clear messages that are max 14 days old. For messages older than 14 days, you have to delete them manually',
-    async execute(msg, args) {
+    async execute(dj_yasuo, msg, args, Discord) {
         if (!args[0]) return msg.reply('Please the amount of messages that you want to clear');
         if (isNaN(args[0])) return msg.reply('Please enter a real number');
         if (args[0] > 100) return msg.reply('You cannot delete more than 100 messages');

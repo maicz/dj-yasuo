@@ -1,8 +1,8 @@
 module.exports = {
     name: 'embed',
     description: 'Show off a cool embed thingy',
-    execute(msg, args, discord) {
-        const embed = new discord.MessageEmbed()
+    execute(dj_yasuo, msg, args, Discord) {
+        const embed = new Discord.MessageEmbed()
             .setColor('#0099ff')
             .setTitle(':fire:Giyuu senpai:fire:')
             .setURL('https://kimetsu-no-yaiba.fandom.com/wiki/Giyu_Tomioka')

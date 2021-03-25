@@ -21,6 +21,22 @@ module.exports = {
         * */
         if (!args.length) return msg.reply('You need to tell me what to play bro');
 
+        const validURL = (str) => {
+            const regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
+            return regex.test(str);
+        }
+
+        if (validURL(args[0])) {
+            const connection = await voiceChannel.join();
+            const stream = ytdl(args[0], {filter: 'audioonly'});
+            connection.play(stream, {seek: 0, volume: 1})
+                .on('finish', () => {
+                    voiceChannel.leave();
+                });
+            await msg.reply(`:thumbsup: Now playing ***Your link***`);
+            return;
+        }
+
         /*
         * Connect to the voice channel, run the user's query using yt-search
         * and fetch the first video.
