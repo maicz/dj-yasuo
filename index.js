@@ -8,4 +8,4 @@ dj_yasuo.events = new Discord.Collection();
     require(`./handlers/${handler}`)(dj_yasuo, Discord);
 })
 
-dj_yasuo.login('ODE4NzU2ODE2MzA1MjU4NTI2.YEcstA.kva4Xiaijv8X73pzsG06jMS9o8Q');
+dj_yasuo.login(process.env.LOGIN_TOKEN);
